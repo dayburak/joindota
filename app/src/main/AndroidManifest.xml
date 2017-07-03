@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.unofficial.joindota">
+
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.CAPTURE_SECURE_VIDEO_OUTPUT"></uses-permission>
+    <uses-permission android:name="android.permission.CAPTURE_VIDEO_OUTPUT"></uses-permission>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/joindota1"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/joindota1"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:configChanges="orientation|keyboard|screenLayout|screenSize|keyboardHidden|layoutDirection|uiMode|locale"
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboard|screenLayout|screenSize|keyboardHidden|layoutDirection|uiMode|locale"
+            android:name=".Single_News_Activity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboard|screenLayout|screenSize|keyboardHidden|layoutDirection|uiMode|locale"
+            android:name=".Single_Live_Stream_Activity"
+            android:label="@string/app_name">
+        </activity>
+    </application>
+
+</manifest>
