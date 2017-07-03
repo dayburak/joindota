@@ -1,18 +1,21 @@
 package com.unofficial.joindota;
 
 import android.app.Activity;
-import android.app.Fragment;
-import android.content.Intent;
+
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener  {
@@ -63,7 +66,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         fragment_manager.beginTransaction().replace(R.id.inner_content, new News_Fragment()).commit();
         refresher.startAnimation(refresher_on_cooldown);
-
         refresher.setOnClickListener(this);
     }
 
