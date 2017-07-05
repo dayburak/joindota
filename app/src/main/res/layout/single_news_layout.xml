@@ -7,13 +7,12 @@
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:rowCount="2"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false"
+        android:background="#000000"
         android:columnCount="2"
         android:longClickable="false"
-        android:layout_alignParentStart="false"
-        android:layout_marginTop="52dp"
-        android:layout_alignParentEnd="false"
-        android:background="#000000">
+        android:rowCount="2">
 
         <WebView
             android:id="@+id/webView2"
