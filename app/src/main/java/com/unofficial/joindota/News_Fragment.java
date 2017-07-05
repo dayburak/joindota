@@ -149,28 +149,31 @@ public class News_Fragment extends Fragment {
 
                 final View.OnClickListener listener = new View.OnClickListener() {
                     public void onClick(View v) {
-                        if (v.getId() == R.id.imageView2 || v.getId() == R.id.textView) {
+
+                        int id = v.getId();
+
+                        if (id == R.id.imageView2 || id == R.id.textView) {
                             START_NEWS(Parser.news_list.get(0).m_page_link);
                         }
-                        if (v.getId() == R.id.imageView3 || v.getId() == R.id.textView3) {
+                        if (id == R.id.imageView3 || id == R.id.textView3) {
                             START_NEWS(Parser.news_list.get(1).m_page_link);
                         }
-                        if (v.getId() == R.id.imageView4 || v.getId() == R.id.textView5) {
+                        if (id == R.id.imageView4 || id == R.id.textView5) {
                             START_NEWS(Parser.news_list.get(2).m_page_link);
                         }
-                        if (v.getId() == R.id.imageView5 || v.getId() == R.id.textView7) {
+                        if (id == R.id.imageView5 || id == R.id.textView7) {
                             START_NEWS(Parser.news_list.get(3).m_page_link);
                         }
-                        if (v.getId() == R.id.imageView6 || v.getId() == R.id.textView9) {
+                        if (id == R.id.imageView6 || id == R.id.textView9) {
                             START_NEWS(Parser.news_list.get(4).m_page_link);
                         }
-                        if (v.getId() == R.id.imageView7 || v.getId() == R.id.textView11) {
+                        if (id == R.id.imageView7 || id == R.id.textView11) {
                             START_NEWS(Parser.news_list.get(5).m_page_link);
                         }
-                        if (v.getId() == R.id.imageView8 || v.getId() == R.id.textView13) {
+                        if (id == R.id.imageView8 || id == R.id.textView13) {
                             START_NEWS(Parser.news_list.get(6).m_page_link);
                         }
-                        if (v.getId() == R.id.imageView9 || v.getId() == R.id.textView15) {
+                        if (id == R.id.imageView9 || id == R.id.textView15) {
                             START_NEWS(Parser.news_list.get(7).m_page_link);
                         }
                     }

@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,8 +27,9 @@ public class Live_Streams_Fragment extends Fragment {
     WebView webView;
     GridLayout stream_grid;
 
-    ArrayList<TextView> stream_names;
+    ArrayList<TextView>  stream_names;
     ArrayList<ImageView> flags;
+    ArrayList<CardView>  card_views;
 
 
     @Override
@@ -43,7 +45,6 @@ public class Live_Streams_Fragment extends Fragment {
     {
         stream_grid = streams_view.findViewById(R.id.stream_grid);
         webView     = MainActivity.main_activity.findViewById(R.id.webView);
-        //recycler_view = (RecyclerView) streams_view.findViewById(R.id.recyclerview);
 
         TextView stream1  = streams_view.findViewById(R.id.stream1);
         TextView stream2  = streams_view.findViewById(R.id.stream2);
@@ -67,12 +68,24 @@ public class Live_Streams_Fragment extends Fragment {
         ImageView flag9  = streams_view.findViewById(R.id.stream_img9);
         ImageView flag10 = streams_view.findViewById(R.id.stream_img10);
 
-        if (stream_names != null || flags != null) {
+        CardView card_view1  = streams_view.findViewById(R.id.card_view1);
+        CardView card_view2  = streams_view.findViewById(R.id.card_view2);
+        CardView card_view3  = streams_view.findViewById(R.id.card_view3);
+        CardView card_view4  = streams_view.findViewById(R.id.card_view4);
+        CardView card_view5  = streams_view.findViewById(R.id.card_view5);
+        CardView card_view6  = streams_view.findViewById(R.id.card_view6);
+        CardView card_view7  = streams_view.findViewById(R.id.card_view7);
+        CardView card_view8  = streams_view.findViewById(R.id.card_view8);
+        CardView card_view9  = streams_view.findViewById(R.id.card_view9);
+        CardView card_view10 = streams_view.findViewById(R.id.card_view10);
+
+        if (stream_names != null || flags != null || card_views != null) {
             return;
         }
 
         stream_names = new ArrayList<TextView>();
         flags        = new ArrayList<ImageView>();
+        card_views   = new ArrayList<CardView>();
 
         stream_names.add(stream1);
         stream_names.add(stream2);
@@ -96,6 +109,16 @@ public class Live_Streams_Fragment extends Fragment {
         flags.add(flag9);
         flags.add(flag10);
 
+        card_views.add(card_view1);
+        card_views.add(card_view2);
+        card_views.add(card_view3);
+        card_views.add(card_view4);
+        card_views.add(card_view5);
+        card_views.add(card_view6);
+        card_views.add(card_view7);
+        card_views.add(card_view8);
+        card_views.add(card_view9);
+        card_views.add(card_view10);
     }
 
     public void INITIALIZE_UI_ELEMENTS () {
@@ -147,37 +170,38 @@ public class Live_Streams_Fragment extends Fragment {
 
                 final View.OnClickListener listener = new View.OnClickListener() {
                     public void onClick(View v) {
-                        switch(v.getId()) {
-                            case R.id.stream1:
-                                START_STREAM(Parser.streams_list.get(0).m_page_link);
-                                break;
-                            case R.id.stream2:
-                                START_STREAM(Parser.streams_list.get(1).m_page_link);
-                                break;
-                            case R.id.stream3:
-                                START_STREAM(Parser.streams_list.get(2).m_page_link);
-                                break;
-                            case R.id.stream4:
-                                START_STREAM(Parser.streams_list.get(3).m_page_link);
-                                break;
-                            case R.id.stream5:
-                                START_STREAM(Parser.streams_list.get(4).m_page_link);
-                                break;
-                            case R.id.stream6:
-                                START_STREAM(Parser.streams_list.get(5).m_page_link);
-                                break;
-                            case R.id.stream7:
-                                START_STREAM(Parser.streams_list.get(6).m_page_link);
-                                break;
-                            case R.id.stream8:
-                                START_STREAM(Parser.streams_list.get(7).m_page_link);
-                                break;
-                            case R.id.stream9:
-                                START_STREAM(Parser.streams_list.get(8).m_page_link);
-                                break;
-                            case R.id.stream10:
-                                START_STREAM(Parser.streams_list.get(9).m_page_link);
-                                break;
+
+                        int id = v.getId();
+
+                        if (id == R.id.stream1 || id == R.id.card_view1) {
+                            START_STREAM(Parser.streams_list.get(0).m_page_link);
+                        }
+                        if (id == R.id.stream2 || id == R.id.card_view2) {
+                            START_STREAM(Parser.streams_list.get(1).m_page_link);
+                        }
+                        if (id == R.id.stream3 || id == R.id.card_view3) {
+                            START_STREAM(Parser.streams_list.get(2).m_page_link);
+                        }
+                        if (id == R.id.stream4 || id == R.id.card_view4) {
+                            START_STREAM(Parser.streams_list.get(3).m_page_link);
+                        }
+                        if (id == R.id.stream5 || id == R.id.card_view5) {
+                            START_STREAM(Parser.streams_list.get(4).m_page_link);
+                        }
+                        if (id == R.id.stream6 || id == R.id.card_view6) {
+                            START_STREAM(Parser.streams_list.get(5).m_page_link);
+                        }
+                        if (id == R.id.stream7 || id == R.id.card_view7) {
+                            START_STREAM(Parser.streams_list.get(6).m_page_link);
+                        }
+                        if (id == R.id.stream8 || id == R.id.card_view8) {
+                            START_STREAM(Parser.streams_list.get(7).m_page_link);
+                        }
+                        if (id == R.id.stream9 || id == R.id.card_view9) {
+                            START_STREAM(Parser.streams_list.get(8).m_page_link);
+                        }
+                        if (id == R.id.stream10 || id == R.id.card_view10) {
+                            START_STREAM(Parser.streams_list.get(9).m_page_link);
                         }
                     }
                 };
@@ -189,6 +213,8 @@ public class Live_Streams_Fragment extends Fragment {
                             stream_names.get(i).setText(Parser.streams_list.get(i).m_name);
                             stream_names.get(i).setClickable(true);
                             stream_names.get(i).setOnClickListener(listener);
+                            card_views.get(i).setClickable(true);
+                            card_views.get(i).setOnClickListener(listener);
                         }
                     }
                 });

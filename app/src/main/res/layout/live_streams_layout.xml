@@ -42,6 +42,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_column="0"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:layout_row="1"
                 android:background="@android:color/black"
                 android:backgroundTint="@android:drawable/screen_background_dark_transparent"
@@ -52,7 +54,7 @@
                     android:layout_height="match_parent"
                     android:background="@android:color/black"
                     android:backgroundTint="@android:drawable/screen_background_dark_transparent"
-                    android:backgroundTintMode="src_over">
+                    android:backgroundTintMode="src_in">
 
                     <ImageView
                         android:id="@+id/stream_img1"
@@ -69,6 +71,7 @@
                         android:layout_marginTop="10dp"
                         android:background="@android:color/background_dark"
                         android:backgroundTint="@android:drawable/screen_background_dark_transparent"
+                        android:clickable="false"
                         android:editable="false"
                         android:elegantTextHeight="false"
                         android:gravity="center"
@@ -91,14 +94,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_column="0"
-                android:layout_row="3">
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_row="3"
+                app:cardBackgroundColor="@android:drawable/screen_background_dark_transparent">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/black"
                     android:backgroundTint="@android:drawable/screen_background_dark_transparent"
-                    android:backgroundTintMode="src_over">
+                    android:backgroundTintMode="src_in">
 
                     <ImageView
                         android:id="@+id/stream_img2"
@@ -136,14 +142,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_column="0"
-                android:layout_row="5">
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_row="5"
+                app:cardBackgroundColor="@android:drawable/screen_background_dark_transparent">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/black"
                     android:backgroundTint="@android:drawable/screen_background_dark_transparent"
-                    android:backgroundTintMode="src_over">
+                    android:backgroundTintMode="src_in">
 
                     <ImageView
                         android:id="@+id/stream_img3"
@@ -156,8 +165,11 @@
                         android:id="@+id/stream3"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="50dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="11dp"
+                        android:layout_marginStart="11dp"
+                        android:layout_toEndOf="@+id/stream_img3"
+                        android:layout_toRightOf="@+id/stream_img3"
                         android:background="@android:color/background_dark"
                         android:backgroundTint="@android:drawable/screen_background_dark_transparent"
                         android:editable="false"
@@ -180,14 +192,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_column="0"
-                android:layout_row="7">
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_row="7"
+                app:cardBackgroundColor="@android:drawable/screen_background_dark_transparent">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/black"
                     android:backgroundTint="@android:drawable/screen_background_dark_transparent"
-                    android:backgroundTintMode="src_over">
+                    android:backgroundTintMode="src_in">
 
                     <ImageView
                         android:id="@+id/stream_img4"
@@ -225,14 +240,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_column="0"
-                android:layout_row="9">
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_row="9"
+                app:cardBackgroundColor="@android:drawable/screen_background_dark_transparent">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/black"
                     android:backgroundTint="@android:drawable/screen_background_dark_transparent"
-                    android:backgroundTintMode="src_over">
+                    android:backgroundTintMode="src_in">
 
                     <ImageView
                         android:id="@+id/stream_img5"
@@ -270,14 +288,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_column="0"
-                android:layout_row="11">
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_row="11"
+                app:cardBackgroundColor="@android:drawable/screen_background_dark_transparent">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/black"
                     android:backgroundTint="@android:drawable/screen_background_dark_transparent"
-                    android:backgroundTintMode="src_over">
+                    android:backgroundTintMode="src_in">
 
                     <ImageView
                         android:id="@+id/stream_img6"
@@ -315,14 +336,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_column="0"
-                android:layout_row="13">
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_row="13"
+                app:cardBackgroundColor="@android:drawable/screen_background_dark_transparent">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/black"
                     android:backgroundTint="@android:drawable/screen_background_dark_transparent"
-                    android:backgroundTintMode="src_over">
+                    android:backgroundTintMode="src_in">
 
                     <ImageView
                         android:id="@+id/stream_img7"
@@ -360,14 +384,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_column="0"
-                android:layout_row="15">
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_row="15"
+                app:cardBackgroundColor="@android:drawable/screen_background_dark_transparent">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/black"
                     android:backgroundTint="@android:drawable/screen_background_dark_transparent"
-                    android:backgroundTintMode="src_over">
+                    android:backgroundTintMode="src_in">
 
                     <ImageView
                         android:id="@+id/stream_img8"
@@ -405,14 +432,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_column="0"
-                android:layout_row="17">
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_row="17"
+                app:cardBackgroundColor="@android:drawable/screen_background_dark_transparent">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/black"
                     android:backgroundTint="@android:drawable/screen_background_dark_transparent"
-                    android:backgroundTintMode="src_over">
+                    android:backgroundTintMode="src_in">
 
                     <ImageView
                         android:id="@+id/stream_img9"
@@ -450,14 +480,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_column="0"
-                android:layout_row="19">
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_row="19"
+                app:cardBackgroundColor="@android:drawable/screen_background_dark_transparent">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@android:color/black"
                     android:backgroundTint="@android:drawable/screen_background_dark_transparent"
-                    android:backgroundTintMode="src_over">
+                    android:backgroundTintMode="src_in">
 
                     <ImageView
                         android:id="@+id/stream_img10"
