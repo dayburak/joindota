@@ -7,20 +7,17 @@
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:rowCount="2"
+        android:background="#000000"
         android:columnCount="2"
         android:longClickable="false"
-        android:layout_alignParentStart="false"
-        android:layout_marginTop="52dp"
-        android:layout_alignParentEnd="false"
-        android:background="#000000">
+        android:rowCount="1">
 
         <WebView
+            android:id="@+id/webView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/webView"
-            android:layout_row="0"
             android:layout_column="0"
+            android:layout_row="0"
             android:background="#000000" />
     </GridLayout>
 
