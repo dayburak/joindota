@@ -35,45 +35,45 @@ public class News_Fragment extends Fragment {
 
     public void IDENTIFY_AND_GROUP_UI_ELEMENTS ()
     {
-        Resources resources = getResources();
-        ImageView header_image = (ImageView) news_view.findViewById(R.id.imageView);
+        Resources resources    = getResources();
+        ImageView header_image = news_view.findViewById(R.id.imageView);
         header_image.setImageDrawable(resources.getDrawable(R.mipmap.joindota1));
 
-        ImageView news_image  = (ImageView) news_view.findViewById(R.id.imageView2);
-        ImageView news_image1 = (ImageView) news_view.findViewById(R.id.imageView3);
-        ImageView news_image2 = (ImageView) news_view.findViewById(R.id.imageView4);
-        ImageView news_image3 = (ImageView) news_view.findViewById(R.id.imageView5);
-        ImageView news_image4 = (ImageView) news_view.findViewById(R.id.imageView6);
-        ImageView news_image5 = (ImageView) news_view.findViewById(R.id.imageView7);
-        ImageView news_image6 = (ImageView) news_view.findViewById(R.id.imageView8);
-        ImageView news_image7 = (ImageView) news_view.findViewById(R.id.imageView9);
+        ImageView news_image  = news_view.findViewById(R.id.imageView2);
+        ImageView news_image1 = news_view.findViewById(R.id.imageView3);
+        ImageView news_image2 = news_view.findViewById(R.id.imageView4);
+        ImageView news_image3 = news_view.findViewById(R.id.imageView5);
+        ImageView news_image4 = news_view.findViewById(R.id.imageView6);
+        ImageView news_image5 = news_view.findViewById(R.id.imageView7);
+        ImageView news_image6 = news_view.findViewById(R.id.imageView8);
+        ImageView news_image7 = news_view.findViewById(R.id.imageView9);
 
-        TextView title1 = (TextView) news_view.findViewById(R.id.textView);
-        TextView title2 = (TextView) news_view.findViewById(R.id.textView3);
-        TextView title3 = (TextView) news_view.findViewById(R.id.textView5);
-        TextView title4 = (TextView) news_view.findViewById(R.id.textView7);
-        TextView title5 = (TextView) news_view.findViewById(R.id.textView9);
-        TextView title6 = (TextView) news_view.findViewById(R.id.textView11);
-        TextView title7 = (TextView) news_view.findViewById(R.id.textView13);
-        TextView title8 = (TextView) news_view.findViewById(R.id.textView15);
+        TextView title1 = news_view.findViewById(R.id.textView);
+        TextView title2 = news_view.findViewById(R.id.textView3);
+        TextView title3 = news_view.findViewById(R.id.textView5);
+        TextView title4 = news_view.findViewById(R.id.textView7);
+        TextView title5 = news_view.findViewById(R.id.textView9);
+        TextView title6 = news_view.findViewById(R.id.textView11);
+        TextView title7 = news_view.findViewById(R.id.textView13);
+        TextView title8 = news_view.findViewById(R.id.textView15);
 
-        TextView content1 = (TextView) news_view.findViewById(R.id.textView2);
-        TextView content2 = (TextView) news_view.findViewById(R.id.textView4);
-        TextView content3 = (TextView) news_view.findViewById(R.id.textView6);
-        TextView content4 = (TextView) news_view.findViewById(R.id.textView8);
-        TextView content5 = (TextView) news_view.findViewById(R.id.textView10);
-        TextView content6 = (TextView) news_view.findViewById(R.id.textView12);
-        TextView content7 = (TextView) news_view.findViewById(R.id.textView14);
-        TextView content8 = (TextView) news_view.findViewById(R.id.textView16);
+        TextView content1 = news_view.findViewById(R.id.textView2);
+        TextView content2 = news_view.findViewById(R.id.textView4);
+        TextView content3 = news_view.findViewById(R.id.textView6);
+        TextView content4 = news_view.findViewById(R.id.textView8);
+        TextView content5 = news_view.findViewById(R.id.textView10);
+        TextView content6 = news_view.findViewById(R.id.textView12);
+        TextView content7 = news_view.findViewById(R.id.textView14);
+        TextView content8 = news_view.findViewById(R.id.textView16);
 
-        ProgressBar bar1 = (ProgressBar) news_view.findViewById(R.id.progressBar2);
-        ProgressBar bar2 = (ProgressBar) news_view.findViewById(R.id.progressBar3);
-        ProgressBar bar3 = (ProgressBar) news_view.findViewById(R.id.progressBar4);
-        ProgressBar bar4 = (ProgressBar) news_view.findViewById(R.id.progressBar5);
-        ProgressBar bar5 = (ProgressBar) news_view.findViewById(R.id.progressBar6);
-        ProgressBar bar6 = (ProgressBar) news_view.findViewById(R.id.progressBar7);
-        ProgressBar bar7 = (ProgressBar) news_view.findViewById(R.id.progressBar8);
-        ProgressBar bar8 = (ProgressBar) news_view.findViewById(R.id.progressBar9);
+        ProgressBar bar1 = news_view.findViewById(R.id.progressBar2);
+        ProgressBar bar2 = news_view.findViewById(R.id.progressBar3);
+        ProgressBar bar3 = news_view.findViewById(R.id.progressBar4);
+        ProgressBar bar4 = news_view.findViewById(R.id.progressBar5);
+        ProgressBar bar5 = news_view.findViewById(R.id.progressBar6);
+        ProgressBar bar6 = news_view.findViewById(R.id.progressBar7);
+        ProgressBar bar7 = news_view.findViewById(R.id.progressBar8);
+        ProgressBar bar8 = news_view.findViewById(R.id.progressBar9);
 
         bars = new ArrayList<ProgressBar>();
         bars.add(bar1);
@@ -228,17 +228,8 @@ public class News_Fragment extends Fragment {
             @Override
             public void run() {
                 Intent intent = new Intent(MainActivity.main_activity.getApplicationContext(), Single_News_Activity.class);
+                intent.putExtra("news_link", news_link);
                 startActivity(intent);
-
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-
-                Intent intent2 = new Intent("news_link");
-                intent2.putExtra("news_link", news_link);
-                MainActivity.main_activity.sendBroadcast(intent2);
             }
         }).start();
     }

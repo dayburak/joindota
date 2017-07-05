@@ -20,10 +20,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 
-/**
- * Created by burak on 27.06.2017.
- */
-
 public class Live_Streams_Fragment extends Fragment {
 
     View streams_view;
@@ -45,31 +41,31 @@ public class Live_Streams_Fragment extends Fragment {
 
     public void IDENTIFY_AND_GROUP_UI_ELEMENTS ()
     {
-        stream_grid = (GridLayout) streams_view.findViewById(R.id.stream_grid);
-        webView     = (WebView) MainActivity.main_activity.findViewById(R.id.webView);
+        stream_grid = streams_view.findViewById(R.id.stream_grid);
+        webView     = MainActivity.main_activity.findViewById(R.id.webView);
         //recycler_view = (RecyclerView) streams_view.findViewById(R.id.recyclerview);
 
-        TextView stream1  = (TextView) streams_view.findViewById(R.id.stream1);
-        TextView stream2  = (TextView) streams_view.findViewById(R.id.stream2);
-        TextView stream3  = (TextView) streams_view.findViewById(R.id.stream3);
-        TextView stream4  = (TextView) streams_view.findViewById(R.id.stream4);
-        TextView stream5  = (TextView) streams_view.findViewById(R.id.stream5);
-        TextView stream6  = (TextView) streams_view.findViewById(R.id.stream6);
-        TextView stream7  = (TextView) streams_view.findViewById(R.id.stream7);
-        TextView stream8  = (TextView) streams_view.findViewById(R.id.stream8);
-        TextView stream9  = (TextView) streams_view.findViewById(R.id.stream9);
-        TextView stream10 = (TextView) streams_view.findViewById(R.id.stream10);
+        TextView stream1  = streams_view.findViewById(R.id.stream1);
+        TextView stream2  = streams_view.findViewById(R.id.stream2);
+        TextView stream3  = streams_view.findViewById(R.id.stream3);
+        TextView stream4  = streams_view.findViewById(R.id.stream4);
+        TextView stream5  = streams_view.findViewById(R.id.stream5);
+        TextView stream6  = streams_view.findViewById(R.id.stream6);
+        TextView stream7  = streams_view.findViewById(R.id.stream7);
+        TextView stream8  = streams_view.findViewById(R.id.stream8);
+        TextView stream9  = streams_view.findViewById(R.id.stream9);
+        TextView stream10 = streams_view.findViewById(R.id.stream10);
 
-        ImageView flag1  = (ImageView) streams_view.findViewById(R.id.stream_img1);
-        ImageView flag2  = (ImageView) streams_view.findViewById(R.id.stream_img2);
-        ImageView flag3  = (ImageView) streams_view.findViewById(R.id.stream_img3);
-        ImageView flag4  = (ImageView) streams_view.findViewById(R.id.stream_img4);
-        ImageView flag5  = (ImageView) streams_view.findViewById(R.id.stream_img5);
-        ImageView flag6  = (ImageView) streams_view.findViewById(R.id.stream_img6);
-        ImageView flag7  = (ImageView) streams_view.findViewById(R.id.stream_img7);
-        ImageView flag8  = (ImageView) streams_view.findViewById(R.id.stream_img8);
-        ImageView flag9  = (ImageView) streams_view.findViewById(R.id.stream_img9);
-        ImageView flag10 = (ImageView) streams_view.findViewById(R.id.stream_img10);
+        ImageView flag1  = streams_view.findViewById(R.id.stream_img1);
+        ImageView flag2  = streams_view.findViewById(R.id.stream_img2);
+        ImageView flag3  = streams_view.findViewById(R.id.stream_img3);
+        ImageView flag4  = streams_view.findViewById(R.id.stream_img4);
+        ImageView flag5  = streams_view.findViewById(R.id.stream_img5);
+        ImageView flag6  = streams_view.findViewById(R.id.stream_img6);
+        ImageView flag7  = streams_view.findViewById(R.id.stream_img7);
+        ImageView flag8  = streams_view.findViewById(R.id.stream_img8);
+        ImageView flag9  = streams_view.findViewById(R.id.stream_img9);
+        ImageView flag10 = streams_view.findViewById(R.id.stream_img10);
 
         if (stream_names != null || flags != null) {
             return;
@@ -206,17 +202,8 @@ public class Live_Streams_Fragment extends Fragment {
             @Override
             public void run() {
                 Intent intent = new Intent(MainActivity.main_activity.getApplicationContext(), Single_Live_Stream_Activity.class);
+                intent.putExtra("stream_link", stream_link);
                 startActivity(intent);
-
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-
-                Intent intent2 = new Intent("stream_link");
-                intent2.putExtra("stream_link", stream_link);
-                MainActivity.main_activity.sendBroadcast(intent2);
             }
         }).start();
     }
