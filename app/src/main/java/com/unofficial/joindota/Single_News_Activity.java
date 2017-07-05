@@ -49,6 +49,9 @@ public class Single_News_Activity extends Activity {
                         public void run() {
                             webView2 = findViewById(R.id.webView2);
                             webView2.getSettings().setJavaScriptEnabled(true);
+                            webView2.getSettings().setLoadWithOverviewMode(true);
+//                            webView2.getSettings().setUseWideViewPort(true);
+                            webView2.getSettings().setBuiltInZoomControls(true);
                             webView2.loadDataWithBaseURL(news_link, html, mime, encoding, "");
                         }
                     });

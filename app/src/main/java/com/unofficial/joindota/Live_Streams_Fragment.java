@@ -148,7 +148,7 @@ public class Live_Streams_Fragment extends Fragment {
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        for (int i = 0; i < flags.size(); i++) {
+                        for (int i = 0; i < Parser.streams_list.size(); i++) {
                             while (Parser.streams_list.get(i).m_flag_bitmap == null) {
                                 try {
                                     Thread.sleep(50);
